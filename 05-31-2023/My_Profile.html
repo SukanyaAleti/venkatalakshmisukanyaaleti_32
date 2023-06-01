@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <style>
+        #picture {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var myProfile = {
+            FirstName: 'Venkata Lakshmi Sukanya',
+            LastName: 'Aleti',
+            Education: 'Masters in Computer Science',
+            Contact: '7372886326',
+            Email: 'sukanyaaleti2016@gmail.com',
+            Address1: '712 S Elm St',
+            Address2: 'Apt 1102',
+            County: 'Denton',
+            State: 'TX',
+            Country: 'United States',
+            Hobbies: ['Sketching', 'Baking', 'Traveling', 'Reading Novels', 'Listening Music', {
+                Sports: ['Badminton', 'Soccer', 'Chess', 'Carroms']
+            }, {
+                Achievements: ['Masters Graduate', 'Sketching Winner']
+            }],
+        };
+    </script>
+    <center>
+        <div>
+            <h1 style="color: blue"><u>My Profile</u> </h1>
+            <img id="picture" src="file:/Users/sukanyaaleti/Downloads/sukku.jpg" alt="picture" border:40px>
+            <h2>First Name: <span id="first-name"></span></h2>
+            <h2>Last Name: <span id="last-name"></span></h2>
+        </div>
+    </center>
+    <script>
+        document.getElementById('first-name').innerText = myProfile.FirstName;
+        document.getElementById('last-name').innerText = myProfile.LastName;
+        const lastHobby = myProfile.Hobbies[myProfile.Hobbies.length - 1].Achievements[1];
+        console.log("Last Hobby: " + lastHobby);
+    </script>
+</body>
+</html>
