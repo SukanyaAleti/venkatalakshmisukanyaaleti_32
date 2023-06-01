@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>110.001111</title>
+    <script>
+     let environment ='dev';
+     let sending_amount = 100;
+     switch(environment){
+     case 'dev':
+        sending_amount += sending_amount * 0.1;
+        break;
+     case 'test':
+        sending_amount += sending_amount * 0.2;
+        break;
+     case 'stage':
+        sending_amount += sending_amount * 0.3;
+        break;
+     case 'prod':      
+        sending_amount += sending_amount * 0.05;
+        break;
+     default:
+        sending_amount;
+     }
+     console.log("sending_amount: " + sending_amount);
+    </script>
+    <body>
+        <center>
+            <div>
+                <h1 style="color: blue"><u>Account</u> </h1>
+                <h2>Amount to be Sent: <span id="sendingAmount"></span></h2>
+    
+        <script>
+            document.getElementById("sendingAmount").textContent = sending_amount.toFixed(2);
+        </script>
+    </body>    
+</head>
