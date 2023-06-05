@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Methods</title>
+</head>
+<body>
+<script>
+// Initial array of hobbies
+let hobbies = ["Reading", "Painting", "Cooking", "Photography"];
+
+// Function to return all hobbies in an array
+function getHobbies() {
+  return hobbies;
+}
+console.log("List of hobbies:", getHobbies());
+  
+
+// Function to add a new hobby to the existing list
+function addHobby(newHobby) {
+  hobbies.push(newHobby);
+}
+addHobby("Gardening");
+console.log("After adding a new hobby:", getHobbies());
+// Function to delete a specific hobby from the list
+function deleteHobby(hobbyToDelete) {
+  const index = hobbies.indexOf(hobbyToDelete);
+  if (index > -1 ) {
+    hobbies.splice(index, 1);
+  }
+}
+deleteHobby("Reading");
+console.log("After deleting a hobby:", getHobbies());
+</script>
+</body>
+</html>
