@@ -1,0 +1,18 @@
+    <html>
+        <head>
+            <title> PrototypeMethod</title>
+            <script>
+                var numbers = [64, 3, -2, 33, 44, 37];
+               Array.prototype.getSecondSmallest = function() {
+            if (this.length < 2) {
+                return undefined;
+            }
+            const sortedArray = this.sort((a, b) => a - b);
+            return sortedArray[1];
+        };
+
+        const secondSmallest = numbers.getSecondSmallest();
+        console.log("Second Smallest number is : ", secondSmallest);
+        </script>
+        </head>
+    </html>
